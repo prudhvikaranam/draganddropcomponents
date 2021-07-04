@@ -1,0 +1,13 @@
+<div class="container" id="container" [ngStyle]="{'display' : 'flex'}">
+  <div class="componentList" [ngStyle]="{'width': '30%', 'background' : 'red'}">
+    <div *ngFor='let component of componentArray' >
+      <p [ngStyle]="{'width': '90%', 'background' : 'white'}" draggable [dragData] = component>
+        {{component}}</p>
+    </div>
+  </div>
+  <div (onDrop)="onItemDrop($event)" droppable [ngStyle]="{'width': '70%', 'background' : 'orange'}">
+    <div class="componentHolder" id="componentHolder" [ngStyle]="{'width': '70%', 'background' : 'orange'}">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

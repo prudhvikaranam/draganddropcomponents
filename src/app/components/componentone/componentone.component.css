@@ -1,0 +1,4 @@
+.componentList{
+    display: flex;
+    flex-direction: column;
+}
